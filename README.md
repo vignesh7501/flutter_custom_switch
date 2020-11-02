@@ -28,8 +28,9 @@ To use this package :
 FlutterCustomSwitch(
           value: true,
           onChanged: (value) {},
-)
-
+          activeImagePath: dayImage,
+          inActiveImagePath: nightImage,
+        ),
 ```
 
 ### Types
