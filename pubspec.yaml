@@ -1,8 +1,8 @@
 name: flutter_custom_switch
 description: A Flutter package for both android and iOS which provides Custom switch widget.
 version: 0.0.1
-author:
-homepage:
+author: Vignesh Prakash
+homepage: https://github.com/vignesh7501/flutter_custom_switch
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
@@ -15,7 +15,3 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
-flutter:
-  assets:
-    - images/
