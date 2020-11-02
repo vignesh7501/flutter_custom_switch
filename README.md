@@ -4,7 +4,7 @@ A Flutter package for both android and iOS which provides Custom switch widget.
 
 ## Screenshots
 
-<img src="https://github.com/vignesh7501/flutter_custom_switch/blob/main/screenshots/img.png" height="425em" width="250em" />
+<img src="https://github.com/vignesh7501/flutter_custom_switch/blob/main/screenshots/img.png" />
 
 
 ## Usage
