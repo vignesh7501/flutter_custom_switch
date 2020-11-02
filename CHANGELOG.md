@@ -1,3 +1,3 @@
-## [0.0.1] - TODO: Add release date.
+## [0.0.1] - 02 November 2020
 
-* TODO: Describe initial release.
+* Custom switch widget - initial release

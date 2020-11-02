@@ -34,7 +34,6 @@ class _SwitchHomeState extends State<SwitchHome> {
             _row5(),
             Text("On - Off text view"),
             _row6(),
-            SizedBox(height: 30)
           ],
         ),
       ),
