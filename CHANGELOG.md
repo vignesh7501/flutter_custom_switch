@@ -1,4 +1,4 @@
-## [0.0.1+1] - 05 November 2020
+## [0.0.2] - 05 November 2020
 
 * Updates to README 
 
