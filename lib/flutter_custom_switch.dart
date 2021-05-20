@@ -59,6 +59,9 @@ class FlutterCustomSwitch extends StatefulWidget {
   /// enable the text view
   final bool enableOutsideText;
 
+  /// for small size button
+  final bool isSmallToggle;
+
   FlutterCustomSwitch({
     Key key,
     @required this.value,
@@ -72,6 +75,7 @@ class FlutterCustomSwitch extends StatefulWidget {
     this.activeThumbImagePath,
     this.inActiveThumbImagePath,
     this.enableOutsideText = false,
+    this.isSmallToggle = false,
   }) : super(key: key);
 
   @override
@@ -96,6 +100,17 @@ class _FlutterCustomSwitchState extends State<FlutterCustomSwitch> {
   /// main build
   @override
   Widget build(BuildContext context) {
+    /// small size toggle init
+    if (widget.isSmallToggle != null && widget.isSmallToggle) {
+      _switchWidth = 44.0;
+      _switchHeight = 20.0;
+      _thumbSize = 14.0;
+    } else {
+      _switchWidth = 48.0;
+      _switchHeight = 24.0;
+      _thumbSize = 18.0;
+    }
+
     return Container(
       child: _switchButton(),
     );
