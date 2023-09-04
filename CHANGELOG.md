@@ -1,6 +1,9 @@
-## [0.0.3] - 05 November 2020
+## [0.0.4] - 05 November 2020
 
 * Updated with null safety.
+
+## [0.0.3] - 05 November 2020
+
 * Small toggle option added.
 
 ## [0.0.2] - 05 November 2020
