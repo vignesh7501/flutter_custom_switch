@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_custom_switch/flutter_custom_switch.dart';
 
 class SwitchHome extends StatefulWidget {
-  SwitchHome({Key key}) : super(key: key);
+  SwitchHome({Key? key}) : super(key: key);
 
   @override
   _SwitchHomeState createState() => _SwitchHomeState();

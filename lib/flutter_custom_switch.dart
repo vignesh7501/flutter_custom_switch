@@ -45,16 +45,16 @@ class FlutterCustomSwitch extends StatefulWidget {
   final Color inActiveThumbColor;
 
   /// active image path
-  final String activeImagePath;
+  final String? activeImagePath;
 
   /// in-active image path
-  final String inActiveImagePath;
+  final String? inActiveImagePath;
 
   /// active thumb image path
-  final String activeThumbImagePath;
+  final String? activeThumbImagePath;
 
   /// in-active thumb image path
-  final String inActiveThumbImagePath;
+  final String? inActiveThumbImagePath;
 
   /// enable the text view
   final bool enableOutsideText;
@@ -63,9 +63,9 @@ class FlutterCustomSwitch extends StatefulWidget {
   final bool isSmallToggle;
 
   FlutterCustomSwitch({
-    Key key,
-    @required this.value,
-    @required this.onChanged,
+    Key? key,
+    required this.value,
+    required this.onChanged,
     this.activeColor = Colors.blue,
     this.inActiveColor = Colors.grey,
     this.activeThumbColor = Colors.white,
@@ -101,7 +101,7 @@ class _FlutterCustomSwitchState extends State<FlutterCustomSwitch> {
   @override
   Widget build(BuildContext context) {
     /// small size toggle init
-    if (widget.isSmallToggle != null && widget.isSmallToggle) {
+    if (widget.isSmallToggle) {
       _switchWidth = 44.0;
       _switchHeight = 20.0;
       _thumbSize = 14.0;
@@ -185,12 +185,12 @@ class _FlutterCustomSwitchState extends State<FlutterCustomSwitch> {
   /// image view
   /// should pass the both [widget.activeImagePath] and [widget.inActiveImagePath],
   /// else it won't add the image and it'll return the null
-  DecorationImage _backgroundDecorationImage() {
+  DecorationImage? _backgroundDecorationImage() {
     if (_checkBackgroundDecorationImage()) {
       return DecorationImage(
           image: AssetImage((widget.value)
-              ? widget.activeImagePath
-              : widget.inActiveImagePath),
+              ? widget.activeImagePath!
+              : widget.inActiveImagePath!),
           fit: BoxFit.cover);
     }
     return null;
@@ -199,15 +199,15 @@ class _FlutterCustomSwitchState extends State<FlutterCustomSwitch> {
   /// thumb image view
   ///  /// should pass the both [widget.activeThumbImagePath] and [widget.inActiveThumbImagePath],
   /// else it won't add the image and it'll return the null
-  DecorationImage _thumbDecorationImage() {
+  DecorationImage? _thumbDecorationImage() {
     if (((widget.activeThumbImagePath != null &&
-            widget.activeThumbImagePath.isNotEmpty) &&
+            widget.activeThumbImagePath!.isNotEmpty) &&
         (widget.inActiveThumbImagePath != null &&
-            widget.inActiveThumbImagePath.isNotEmpty))) {
+            widget.inActiveThumbImagePath!.isNotEmpty))) {
       return DecorationImage(
           image: AssetImage((widget.value)
-              ? widget.activeThumbImagePath
-              : widget.inActiveThumbImagePath),
+              ? widget.activeThumbImagePath!
+              : widget.inActiveThumbImagePath!),
           fit: BoxFit.cover);
     }
     return null;
@@ -215,8 +215,8 @@ class _FlutterCustomSwitchState extends State<FlutterCustomSwitch> {
 
   bool _checkBackgroundDecorationImage() {
     return ((widget.activeImagePath != null &&
-            widget.activeImagePath.isNotEmpty) &&
+            widget.activeImagePath!.isNotEmpty) &&
         (widget.inActiveImagePath != null &&
-            widget.inActiveImagePath.isNotEmpty));
+            widget.inActiveImagePath!.isNotEmpty));
   }
 }
